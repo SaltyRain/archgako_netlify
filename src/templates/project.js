@@ -24,7 +24,7 @@ class ProjectTemplate extends Component {
     }
 }
 
-ProjectTemplate.PropTypes = {
+ProjectTemplate.propTypes = {
     project: PropTypes.shape({
         title: PropTypes.string,
         year: PropTypes.string,

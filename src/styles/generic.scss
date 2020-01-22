@@ -35,5 +35,5 @@ a {
 }
   
 main {
-    min-height: calc(100vh - #{$navbar-height} - #{$footer-height});
+    min-height: calc(100vh - #{$desktop-header-height} - #{$footer-height-desktop});
 }

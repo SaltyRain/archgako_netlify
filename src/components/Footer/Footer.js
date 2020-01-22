@@ -1,63 +1,29 @@
 import React from "react";
-// import "./styles.scss";
+import "./Footer.scss";
 
-export const FooterTemplate = ({ data }) => {
-  const { logoImage, socialLinks } = data;
+// export const FooterTemplate = ({ data }) => {
 
+//   return (
+//     <footer className = "footer">
+//       <h3 className="footer__title">Контакты</h3>
+//       <a className="footer__tel" href="tel:+79111620482">+7 (921) 636 14 51</a>
+//       <a className="footer__tel" href="tel:+79111620482">+7 (911) 162 04 82</a>
+//       <a className="footer__mail" href="mailto:archgako@gmail.com">@: archgako@gmail.com</a>
+//       <ul className="footer__social-media">
+//         <li className="footer__item_social-media_item"><a href="https://www.instagram.com/ARCHGAKO/">instagram</a></li>
+//         <li className="footer__item_social-media"><a href="https://www.facebook.com/ARCHGAKO/">facebook</a></li>
+//       </ul>
+//     </footer>
+//   )
+// }
+
+function Footer() {
   return (
-    <nav className="footer">
-      <div className="footer-container  container">
-        <div className="footer-top">
-          <div className="footer-about">
-            <h4 className="footer-aboutTitle">
-              <img
-                className="footer-aboutTitleImg"
-                src={logoImage.image}
-                alt={logoImage.imageAlt}
-              />
-            </h4>
-            <p className="footer-aboutDescription">{logoImage.tagline}</p>
-          </div>
-          {socialLinks.length > 0 && (
-            <ul className="footer-socialMenu">
-              {socialLinks.map(socialLink => (
-                <li key={socialLink.linkURL} className="footer-socialMenuItem">
-                  <a
-                    className="footer-socialLink"
-                    href={socialLink.linkURL}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <img
-                      className="footer-socialLinkIcon"
-                      src={socialLink.image}
-                      alt={socialLink.imageAlt}
-                    />
-                    {socialLink.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          )}
-        </div>
-        <div className="footer-bottom">
-          <div className="footer-flag">
-            <span role="img" aria-label="Made in Canada">
-              🇨🇦
-            </span>
-          </div>
-        </div>
-      </div>
-    </nav>
-  );
-};
+    <div>
+      <span>footer</span>
+    </div>
+  )
+}
 
-const Footer = props => {
-  if (!props.data) {
-    return null;
-  }
-  const data = props.data.edges[0].node.frontmatter;
-  return <FooterTemplate data={data} />;
-};
+export default Footer;
 
-export { Footer };
