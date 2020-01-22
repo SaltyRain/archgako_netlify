@@ -47,8 +47,8 @@ collections:
       - {label: Scheme Image, name: schemeImage, widget: image}
       - {label: Scheme Description, name: schemeDescription, widget: string}
 
-  - name: pages
-    label: Pages
+  - name: "pages"
+    label: "Pages"
     files:
       - file: "src/pages/home/index.md"
         label: "Home"
@@ -70,10 +70,10 @@ collections:
         label: "Projects"
         name: "projects"
         fields: 
-        - { label: "Template Key", name: "templateKey", widget: "hidden", default: "projects-page" }
-        - { label: "Title", name: "title", widget" "string"}
-        - { label: "Body", name: "body", widget: "markdown" }
-        - {
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "projects-page" }
+          - { label: "Title", name: "title", widget" "string"}
+          - { label: "Body", name: "body", widget: "markdown" }
+          - {
             label: "SEO & Meta",
             name: "seo",
             widget: "object",
