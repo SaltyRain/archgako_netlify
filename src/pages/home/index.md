@@ -22,6 +22,16 @@ about:
     поэтому мы готовы к смелым эксперементам и вопрощениею самых необычных идей.
   sign: Angelina & Ksenia
 newsHeading: Новости
+maps:
+  - cityMapImage: /img/saintpMap.jpg
+    cityMapImageAlt: Карта Санкт-Петербурга
+    cityName: Санкт-Петербург
+  - cityMapImage: /img/moscowMap.jpg
+    cityMapImageAlt: Карта Москвы
+    cityName: Москва
+  - cityMapImage: /img/milanMap.jpg
+    cityMapImageAlt: Карта Милана
+    cityName: Милан
 seo:
   browserTitle: ARCHGAKO | Главная
   description: Architecture and design company
