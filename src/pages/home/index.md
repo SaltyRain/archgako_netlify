@@ -22,7 +22,7 @@ about:
     поэтому мы готовы к смелым эксперементам и вопрощениею самых необычных идей.
   sign: Angelina & Ksenia
 newsHeading: Новости
-maps:
+cities:
   - cityMapImage: /img/saintpMap.jpg
     cityMapImageAlt: Карта Санкт-Петербурга
     cityName: Санкт-Петербург
