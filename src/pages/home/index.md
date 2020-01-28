@@ -3,6 +3,7 @@ templateKey: home-page
 archgakoLogo: ARCHGAKÒ
 archgakoSign: architecture and design company
 about:
+  aboutHeading: О нас
   ourPhoto: /img/we.jpg
   ourPhotoAlt: Фото основателей студии ARCHGAKO
   paragraph1: >-
