@@ -5,13 +5,13 @@ import "../styles/newsBlock.scss";
 class NewsBlockTemplate extends Component {
     render () {
         return (
-            <div className="news-block">
-                <a href={this.props.newsBlock.url}>
+            <div className="col-12 col-md-6 news-block">
+                <a href={this.props.newsBlock.link}>
                     <div className = "news-block__hover">
                         <h3 className="news-block__title">{this.props.newsBlock.title}</h3>
                     </div>
                     <img className="news-block__photo"
-                    src={this.props.newsBlock.imageUrl} 
+                    src={this.props.newsBlock.image} 
                     alt={this.props.newsBlock.imageAlt} 
                     />
                 </a>
@@ -24,7 +24,7 @@ NewsBlockTemplate.propTypes = {
     newsBlock: PropTypes.shape ({
         url: PropTypes.string,
         title: PropTypes.string,
-        imageUrl: PropTypes.string,
+        image: PropTypes.string,
         imageAlt: PropTypes.string,
     }),
 };

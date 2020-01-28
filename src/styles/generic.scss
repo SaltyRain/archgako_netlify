@@ -1,18 +1,29 @@
 @import "./variables.scss";
 @import "./mixins.scss";
+@import "./fonts.scss";
+
+
 
 html {
-    font-size: 16px;
+    font-size: calc(16px + 2 * ((100vw - 375px) / 1245));
     -moz-osx-font-smoothing: grayscale;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
     text-size-adjust: 100%;
     background-color: $background-light;
+    
   }
 
+@media (min-width: 1441px) {
+    html {
+        background: #e7e7eb;
+    }
+}
+
 body {
-    font-family: serif; //ИЗМЕНИТЬ
+    font-family: $cormorant-regular;
     color: $body-dark;
+    max-width: 1440px;
 }
 
 a {
@@ -36,4 +47,15 @@ a {
   
 main {
     min-height: calc(100vh - #{$desktop-header-height} - #{$footer-height-desktop});
+}
+
+.visually-hidden {
+	position: absolute;
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	border: 0;
+	padding: 0;
+	clip: rect(0 0 0 0);
+	overflow: hidden;
 }

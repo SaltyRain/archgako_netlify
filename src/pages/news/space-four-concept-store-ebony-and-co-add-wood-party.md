@@ -1,4 +1,5 @@
 ---
+templateKey: news-block
 title: 'Space four concept store & ebony and co: add wood party'
 image: /img/spaceForConceptStore.jpg
 imageAlt: 'Space four concept store & ebony and co: add wood party'
