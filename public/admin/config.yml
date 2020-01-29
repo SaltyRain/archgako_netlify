@@ -106,6 +106,26 @@ collections:
               { label: "Description", name: "description", widget: "string" },
             ],
           }
+
+  - name: "headerAndFooter"
+    label: "Header & Footer"
+    files:
+      - file: "src/pages/header/index.md"
+        name: "header"
+        label: "Header"
+        fields: 
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "header" }
+          - {
+              label: "Menu Items",
+              name: "menuItems",
+              widget: "list",
+              fields:
+                [
+                  { label: "Label", name: "label", widget: "string" },
+                  { label: "Link URL", name: "linkURL", widget: "string", hint: "Use a relative URL (e.g. /about) if the link is an internal link." },
+                ],
+          }
+
       # - file: "src/pages/projects-page/index.md"
       #   label: "Projects"
       #   name: "projects"

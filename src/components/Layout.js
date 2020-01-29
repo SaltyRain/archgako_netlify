@@ -13,7 +13,7 @@ const Layout = ({ children }) => (
       <html lang="ru" />
       <meta name="keywords" content="architecture, design, архитектурное бюро" />
     </Helmet>
-    {/* <Header data = {headerData}/> */}
+    <Header data = {headerData}/>
     <main className="container-fluid">{children}</main>
     {/* <Footer/> */}
   </div>

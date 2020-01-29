@@ -1,29 +1,43 @@
 import React from "react";
+import { Link } from "gatsby";
+
 import "./Header.scss";
 
-// export const HeaderTemplate = ({ data }) => {
 
-//   return (
-//     <footer className = "footer">
-//       <h3 className="footer__title">Контакты</h3>
-//       <a className="footer__tel" href="tel:+79111620482">+7 (921) 636 14 51</a>
-//       <a className="footer__tel" href="tel:+79111620482">+7 (911) 162 04 82</a>
-//       <a className="footer__mail" href="mailto:archgako@gmail.com">@: archgako@gmail.com</a>
-//       <ul className="footer__social-media">
-//         <li className="footer__item_social-media_item"><a href="https://www.instagram.com/ARCHGAKO/">instagram</a></li>
-//         <li className="footer__item_social-media"><a href="https://www.facebook.com/ARCHGAKO/">facebook</a></li>
-//       </ul>
-//     </footer>
-//   )
-// }
-
-function Header() {
-    return (
-      <div>
-        <span>header</span>
+export const HeaderTemplate = ({ data }) => {
+  <header className="header row justify-content-between align-items-center">
+    <div className="col-3">
+        <Link to="/">
+          <div className="header__logo">
+            <span className="desktop-header__logo_archgako">ARCHGAKÒ</span>
+            <span className="desktop-header__logo_sign">architecture and design company</span>
+          </div>
+        </Link>
       </div>
-    )
+
+    <div className="col-8 col-lg-7">
+      <nav className="header__desktop-nav">
+        {data.menuItems.length > 0 && (
+          <ul className="header__desktop-nav_menu">
+            {data.menuItems.map(menuItem => (
+              <li key={menuItem.linkURL} className="header__desktop-nav_menu_item">
+                <Link to={menuItem.linkURL}>{menuItem.label}</Link>
+              </li>
+            ))}
+        </ul>
+        )}
+      </nav>
+    </div>
+  </header>
+}
+
+const Header = props => {
+  if (!props.data) {
+    return null;
   }
+  const data = props.data.edges[0].node.frontmatter;
+  return <HeaderTemplate data={data} />;
+}
   
-  export default Header;
+  export default { Header };
 

@@ -1,57 +1,46 @@
 @import "./variables.scss";
 @import "./mixins.scss";
 
+
 .news-block {
-    // display: flex;
-    padding: 5%;
-    position: relative;
-    transform: perspective(1px) translateZ(0);
     box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    transition-duration: 0.3s;
+    a {
+        color: inherit;
+    }
+    &__container {
+        position: relative;
+        margin: 6%;
+        background-color: #000;
+    }
     &__photo {
-        // position: relative;
-        // height: auto;
+        opacity: 1;
+        display: block;
+        width: 100%;
+        height: auto;
+        transition: .5s ease;
+        backface-visibility: hidden;
     }
     &__hover {
-        // display: flex;
-        position: absolute;
-        top: 0;
-        left: 0;
-        // margin: 5%;
-        // padding: inherit;
-        padding: 5%;
-        visibility: hidden;
-        transition: visibility 0.5s ease-in ease-out;
-        width: 0;
-        height: 0;
-    }
-    &__title {
-        text-transform: uppercase;
-        margin-top: 0;
-        font-size: 1.6em;
-        line-height: 1.1;
-        color: $light;
+        transition: .5s ease;
+        opacity: 0;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
+        text-align: center;
+    }
+    &__title {
+        text-transform: uppercase;
+        font-size: 1.6em;
+        line-height: 1.1;
+        color: $light;
     }
 }
 
-.news-block:hover .news-block__hover {
-    padding: inherit;
-    visibility: visible;
-    width: 100%;
-    height: 100%;
-    // padding: 5%;
-    background: rgba(0,0,0,0.5);
-    transition: visability 0.5s ease-in ease-out;
+.news-block__container:hover .news-block__photo {
+    opacity: 0.3;
+}
+.news-block__container:hover .news-block__hover {
+    opacity: 1;
 }
 
-.news-block:active .news-block__hover {
-    visibility: visible;
-    width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.5);
-    transition: visability 0.5s ease-in ease-out;
-}

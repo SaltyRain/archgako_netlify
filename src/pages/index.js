@@ -2,11 +2,12 @@ import React from "react";
 // import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Helmet from "react-helmet";
+import { Link } from "gatsby";
 // import ReactMarkdown from "react-markdown";
 
-import Layout from "../components/Layout"
+import Layout from "../components/Layout";
 // import HTMLContent from "../components/Content";
-import "../styles/home.scss"
+import "../styles/home.scss";
 
 import NewsBlockTemplate from "../templates/newsBlock"
 
@@ -15,16 +16,18 @@ export const HomePageTemplate = ({ home, news = null}) => {
     const { cities } = home;
     return (
         <>
-            <section className="banner section">
+            <section className="banner">
                 <h1>{home.archgakoLogo}<span className="banner__sign">{home.archgakoSign}</span></h1>
-                <button className="banner__button-scrolldown" type="button"></button>
+                <Link to="/#about"><button className="banner__button-scrolldown button-reset" type="button"></button></Link>
+                
             </section>
             
-            <section className="about">
+            <section className="about" id="about">
                 <div className="row">
                     <div className="col-12 col-md-6 order-md-first">
+                    <h2 className="about__title section__title">{home.about.aboutHeading}</h2>
                         <div className="about__description">
-                            <h2 className="about__title section__title">{home.aboutHeading}</h2>
+                            
                             <p className="about__p">{home.about.paragraph1}</p>
                             <p className="about__p">{home.about.paragraph2}</p>
                             <p className="about__p about__p_uppercase">{home.about.paragraph3}</p>
