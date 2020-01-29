@@ -2,9 +2,10 @@ import React from "react";
 import { Link } from "gatsby";
 
 import "./Header.scss";
+import { render } from "node-sass";
 
 
-export const HeaderTemplate = ({ data }) => {
+export const HeaderTemplate = ({ data }) => (
   <header className="header row justify-content-between align-items-center">
     <div className="col-3">
         <Link to="/">
@@ -29,7 +30,7 @@ export const HeaderTemplate = ({ data }) => {
       </nav>
     </div>
   </header>
-}
+);
 
 const Header = props => {
   if (!props.data) {
@@ -37,7 +38,7 @@ const Header = props => {
   }
   const data = props.data.edges[0].node.frontmatter;
   return <HeaderTemplate data={data} />;
-}
+};
   
-  export default { Header };
+  export { Header };
 

@@ -89,9 +89,9 @@ export const HomePageTemplate = ({ home, news = null}) => {
 class HomePage extends React.Component {
     render() {
         const { data } = this.props;
-        // const {
-        //     data: { footerData, headerData },
-        // } = this.props;
+        const {
+            data: { headerData },
+        } = this.props;
         const { frontmatter: home } = data.homePageData.edges[0].node;
         const {
             seo: { title: seoTitle, description: seoDescription, browserTitle },
@@ -112,7 +112,7 @@ class HomePage extends React.Component {
 
 
     return (
-        <Layout>
+        <Layout headerData = {headerData}>
         <Helmet>
           <meta name="title" content={seoTitle} />
           <meta name="description" content={seoDescription} />
