@@ -1,2 +1,0 @@
-(window.webpackJsonp=window.webpackJsonp||[]).push([[3],{w2l6:function(e,n,a){"use strict";a.r(n);var t=a("q1tI"),c=a.n(t);a("WaSO");n.default=function(){return c.a.createElement("div",{className:"container"},c.a.createElement("h1",null,"404"),c.a.createElement("p",null,"Page not found!"))}}}]);
-//# sourceMappingURL=component---src-pages-404-js-928189150d0d616a17a7.js.map

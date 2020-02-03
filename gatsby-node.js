@@ -28,22 +28,17 @@ exports.createPages = ({ actions, graphql }) => {
       return Promise.reject(result.errors);
     }
 
-    // Filter out the footer, header, and projects so we don't create pages for those
+    // Filter out the footer, header, and news so we don't create pages for those
     const postOrPage = result.data.allMarkdownRemark.edges.filter(edge => {
       if (edge.node.frontmatter.templateKey === "header") {
         return false;
       } else if (edge.node.frontmatter.templateKey === "footer") {
         return false;
-      } 
-      else if (Boolean(edge.node.fields.slug.match(/^\/projects\/.*$/)))
-      {
+      } else if (edge.node.frontmatter.templateKey == "news-block") {
         return false;
+      } else {
+        return !Boolean(edge.node.fields.slug.match(/^\/projects\/.*$/)); //пока не создаем страницы для отдельных проектов
       }
-      else if (Boolean(edge.node.fields.slug.match(/^\/news\/.*$/)))
-      {
-        return false;
-      }
-
     });
 
     postOrPage.forEach(edge => {
