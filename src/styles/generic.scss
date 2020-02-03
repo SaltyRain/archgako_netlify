@@ -31,6 +31,10 @@ a {
     text-decoration: none;
 }
 
+a:hover {
+    color: inherit;
+}
+
 .container {
     max-width: $container-width;
     padding: 0 $container-padding;

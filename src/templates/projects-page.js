@@ -1,5 +1,5 @@
 import React from "react";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Helmet from "react-helmet";
 
@@ -76,7 +76,9 @@ export const ProjectsQuery = graphql `
             }
         }
         }
-    
+
+        ...LayoutFragment
+        
     allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "project"}}}) {
         edges {
           node {
@@ -97,5 +99,5 @@ export const ProjectsQuery = graphql `
         }
       }
     }
-
+    
 `

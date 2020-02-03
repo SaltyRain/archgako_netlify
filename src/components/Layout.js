@@ -15,7 +15,7 @@ const Layout = ({ children, headerData = null, footerData = null }) => (
     </Helmet>
     {/* <Header data = {headerData}/> */}
     <main className="container-fluid">{children}</main>
-    {/* <Footer data = {footerData}/> */}
+    <Footer data = {footerData}/>
   </div>
 );
 
@@ -37,23 +37,38 @@ export default Layout;
 //     }
 //   }
 
-//   footerData: allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "footer"}}}) {
-//       edges {
-//         node {
-//           frontmatter {
-//             menuItems {
-//               label
-//               linkURL
-//             }
-//             socialLinks {
-//               label
-//               linkURL
-//             }
-//           }
+export const query = graphql`
+  fragment LayoutFragment on Query {
+    footerData: allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "footer"}}}) {
+      edges {
+        node {
+          frontmatter {
+            title
+            contactItems {
+              contact
+              label
+            }
+            socialLinks {
+              label
+              linkURL
+            }
+          }
+        }
+      }
+    }
+
+
+  }
+  `
+// headerData: allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "header"}}}) {
+//   edges {
+//     node {
+//       frontmatter {
+//         menuItems {
+//           label
+//           linkURL
 //         }
 //       }
 //     }
-
-
+//   }
 // }
-// `

@@ -154,6 +154,12 @@
 }
 
 @media (max-width: 768px) {
+    .section {
+        &__title {
+            margin-left: 5px;
+        }
+           
+    }
     .about {
         &__title {
             display: none;
@@ -170,6 +176,5 @@
         &__photo {
             padding: 10%;
         }
-
     }
 }

@@ -40,5 +40,5 @@ const Header = props => {
   return <HeaderTemplate data={data} />;
 };
   
-  export { Header };
+export { Header };
 

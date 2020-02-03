@@ -32,9 +32,11 @@ exports.createPages = ({ actions, graphql }) => {
     const postOrPage = result.data.allMarkdownRemark.edges.filter(edge => {
       if (edge.node.frontmatter.templateKey === "header") {
         return false;
-      } else if (edge.node.frontmatter.templateKey === "footer") {
+      } 
+      else if (edge.node.frontmatter.templateKey === "footer") {
         return false;
-      } else if (edge.node.frontmatter.templateKey == "news-block") {
+      } 
+      else if (edge.node.frontmatter.templateKey == "news-block") {
         return false;
       } else {
         return !Boolean(edge.node.fields.slug.match(/^\/projects\/.*$/)); //пока не создаем страницы для отдельных проектов
