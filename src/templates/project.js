@@ -6,19 +6,34 @@ class ProjectTemplate extends Component {
     render () {
         return (
             <section className="project">
-                <img className="project__render"
-                    src={this.props.project.renderUrl}
-                    src= {this.props.project.renderAlt}
-                />
-                <div className="project__description">
-                    <h2 className="project__title">{this.props.project.title}</h2>
-                    <span className="project__year">{this.props.project.year}</span>
-                    <p className="project__p">{this.props.project.description}</p>
+                <div className="row no-gutters">
+                    <div className="col">
+                        <img className="project__render"
+                            src={this.props.project.render.renderImage}
+                            alt= {this.props.project.render.renderAlt}
+                        />
+                    </div>
                 </div>
-                <img className="project__scheme"
-                    src={this.props.project.schemeUrl}
-                    src= {this.props.project.schemeAlt}
-                />
+
+                <div className="row justify-content-around align-items-center">
+                    <div className="col-12 col-md-6">
+                        <div className="project__description">
+                            <h2 className="project__title">{this.props.project.title}</h2>
+                            <span className="project__year">{this.props.project.year} год</span>
+                            <p className="project__p">{this.props.project.description}</p>
+                        </div>
+                    </div>
+
+
+                    <div className="col-12 col-md-6">
+                        <img className="project__scheme"
+                            src={this.props.project.scheme.schemeImage}
+                            alt= {this.props.project.scheme.schemeAlt}
+                        />
+                    </div>
+
+                </div>
+                
             </section>
         )
     }

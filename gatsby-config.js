@@ -33,10 +33,12 @@ module.exports = {
         plugins: [],
       },
     },
+    {
+      resolve: `gatsby-plugin-favicon`,
+      options: {
+        logo: "./src/img/favicon.png",
+      },
+    },
     "gatsby-plugin-netlify",
   ],
-}
-
-node: {
-  fs: 'empty'
 }

@@ -12,6 +12,7 @@ collections:
     folder: src/pages/projects
     create: true
     fields:
+      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "project" }
       - {label: Title, name: title, widget: string}
       - {
           label: "Render",
@@ -106,6 +107,43 @@ collections:
               { label: "Description", name: "description", widget: "string" },
             ],
           }
+      - file: "src/pages/projects-page/index.md"
+        label: "Projects"
+        name: "projects"
+        fields: 
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "projects-page" }
+          - { label: "Title", name: "title", widget: "string" }
+          - {
+                label: "SEO & Meta",
+                name: "seo",
+                widget: "object",
+                fields:
+                  [
+                    { label: "Browser Tab Title", name: "browserTitle", widget: "string"},
+                    { label: "Title", name: "title", widget: "string" },
+                    { label: "Description", name: "description", widget: "string" },
+                  ],
+              }
+      - file: "src/pages/services-page/index.md"
+        label: "Services"
+        name: "services"
+        fields: 
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "services-page" }
+          - { label: "Title", name: "title", widget: "string" }
+          - {
+                label: "SEO & Meta",
+                name: "seo",
+                widget: "object",
+                fields:
+                  [
+                    { label: "Browser Tab Title", name: "browserTitle", widget: "string"},
+                    { label: "Title", name: "title", widget: "string" },
+                    { label: "Description", name: "description", widget: "string" },
+                  ],
+              }
+
+
+      
 
   - name: "headerAndFooter"
     label: "Header & Footer"
@@ -114,7 +152,7 @@ collections:
         name: "header"
         label: "Header"
         fields: 
-          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "header" }
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "header-component" }
           - {
               label: "Menu Items",
               name: "menuItems",
@@ -129,7 +167,7 @@ collections:
         name: "footer"
         label: "Footer"
         fields:
-          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "footer" }
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "footer-component" }
           - {label: Title, name: title, widget: string}
           - {
               label: "Contact Items",

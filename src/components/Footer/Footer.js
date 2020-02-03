@@ -4,10 +4,9 @@ import { Link } from "gatsby";
 import "./Footer.scss";
 
 export const FooterTemplate = ({ data }) => {
-  title
   return (
     <footer className = "footer">
-      <h3 className="footer__title">{ title }</h3>
+      <h3 className="footer__title">Подвал{ data.title }</h3>
       {data.contactItems.length > 0 && (
         <ul className="footer__contacts">
           {data.contactItems.map(contactItem => (

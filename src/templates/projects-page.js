@@ -2,7 +2,6 @@ import React from "react";
 import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Helmet from "react-helmet";
-import ReactMarkdown from "react-markdown";
 
 import ProjectTemplate from "./project";
 import Layout from "../components/Layout";
@@ -14,7 +13,7 @@ export const ProjectsPageTemplate = ({
 }) => {
     return (
         <article className="projects">
-            <div className="container projects__container">
+            <div className="projects__container">
                 <h1 className="projects__title visually-hidden">{title}</h1>
                 {
                     projects && projects.map((project, index) => (
@@ -30,10 +29,10 @@ export const ProjectsPageTemplate = ({
     )
 }
 
-ProjectsPageTemplate.PropTypes = {
-    title: PropTypes.string.isRequired,
-    projects: PropTypes.array,
-};
+// ProjectsPageTemplate.PropTypes = {
+//     title: PropTypes.string,
+//     projects: PropTypes.array,
+// };
 
 const ProjectsPage = ({ data }) => {
     const { markdownRemark: page } = data;
@@ -59,8 +58,44 @@ const ProjectsPage = ({ data }) => {
     );
 };
 
-ProjectsPage.PropTypes = {
-    data: PropTypes.object.isRequired,
-};
+// ProjectsPage.PropTypes = {
+//     data: PropTypes.object.isRequired,
+// };
 
 export default ProjectsPage;
+
+export const ProjectsQuery = graphql `
+    query ProjectsPage {
+        markdownRemark(frontmatter: {templateKey: {eq: "projects-page"}}) {
+        frontmatter {
+            title
+            seo {
+            browserTitle
+            description
+            title
+            }
+        }
+        }
+    
+    allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "project"}}}) {
+        edges {
+          node {
+            frontmatter {
+              title
+              render {
+                renderImage
+                renderAlt
+              }
+              year
+              description
+              scheme {
+                schemeImage
+                schemeAlt
+              }
+            }
+          }
+        }
+      }
+    }
+
+`

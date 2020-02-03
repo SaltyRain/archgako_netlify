@@ -1,4 +1,5 @@
 ---
+templateKey: header
 menuItems:
   - label: О нас
     linkURL: '/#about'

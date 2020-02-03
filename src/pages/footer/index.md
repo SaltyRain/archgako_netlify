@@ -1,4 +1,5 @@
 ---
+templateKey: footer
 title: Контакты
 contactItems:
   - contact: 'tel:+79216361451'

@@ -15,19 +15,24 @@
   },
   "dependencies": {
     "bootstrap": "^4.4.1",
-    "gatsby": "^2.18.12",
-    "gatsby-image": "^2.2.39",
+    "core-js": "^3.6.4",
+    "gatsby": "^2.19.10",
+    "gatsby-image": "^2.2.40",
+    "gatsby-plugin-favicon": "^3.1.6",
     "gatsby-plugin-netlify": "^2.1.31",
     "gatsby-plugin-netlify-cms": "^4.1.37",
     "gatsby-plugin-react-helmet": "^3.1.21",
     "gatsby-plugin-sass": "^2.1.27",
-    "gatsby-plugin-sharp": "^2.3.13",
-    "gatsby-source-filesystem": "^2.1.46",
-    "gatsby-transformer-remark": "^2.6.48",
+    "gatsby-plugin-sharp": "^2.4.5",
+    "gatsby-remark-images": "^3.1.44",
+    "gatsby-source-filesystem": "^2.1.48",
+    "gatsby-transformer-remark": "^2.6.49",
     "gatsby-transformer-sharp": "^2.3.13",
+    "lodash": "^4.17.15",
     "netlify-cms": "^2.10.8",
-    "netlify-cms-app": "^2.11.7",
+    "netlify-cms-app": "^2.11.11",
     "node-sass": "^4.13.1",
+    "python": "0.0.4",
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.16",
     "react-dom": "^16.12.0",
@@ -40,5 +45,8 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/SaltyRain/archgako_netlify"
+  },
+  "browser": {
+    "fs": false
   }
 }

@@ -9,7 +9,7 @@ import Layout from "../components/Layout";
 // import HTMLContent from "../components/Content";
 import "../styles/home.scss";
 
-import NewsBlockTemplate from "../templates/newsBlock"
+import NewsBlockTemplate from "../templates/news-block"
 
 
 export const HomePageTemplate = ({ home, news = null}) => {
@@ -90,7 +90,7 @@ class HomePage extends React.Component {
     render() {
         const { data } = this.props;
         const {
-            data: { headerData },
+            data: { headerData, footerData },
         } = this.props;
         const { frontmatter: home } = data.homePageData.edges[0].node;
         const {
@@ -112,7 +112,7 @@ class HomePage extends React.Component {
 
 
     return (
-        <Layout headerData = {headerData}>
+        <Layout headerData = {headerData} footerData = {footerData}>
         <Helmet>
           <meta name="title" content={seoTitle} />
           <meta name="description" content={seoDescription} />
