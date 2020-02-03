@@ -39,6 +39,10 @@ module.exports = {
         logo: "./src/img/favicon.png",
       },
     },
+    {
+      resolve: 'gatsby-plugin-exclude',
+      options: { paths: ['/footer', '/header', '/news', '/project'] },
+    },
     "gatsby-plugin-netlify",
   ],
 }

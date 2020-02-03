@@ -35,9 +35,13 @@ exports.createPages = ({ actions, graphql }) => {
       } else if (edge.node.frontmatter.templateKey === "footer") {
         return false;
       } 
-      
-      else {
-        return !Boolean(edge.node.fields.slug.match(/^\/projects\/.*$/));
+      else if (Boolean(edge.node.fields.slug.match(/^\/projects\/.*$/)))
+      {
+        return false;
+      }
+      else if (Boolean(edge.node.fields.slug.match(/^\/news\/.*$/)))
+      {
+        return false;
       }
     });
 

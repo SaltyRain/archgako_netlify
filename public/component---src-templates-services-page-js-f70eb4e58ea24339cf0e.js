@@ -1,0 +1,2 @@
+(window.webpackJsonp=window.webpackJsonp||[]).push([[8],{csyl:function(e,n,a){"use strict";a.r(n);var t=a("q1tI"),c=a.n(t);a("WaSO");n.default=function(){return c.a.createElement("div",{className:"container"},c.a.createElement("h1",null,"Services"),c.a.createElement("p",null,"Page is not ready yet!"))}}}]);
+//# sourceMappingURL=component---src-templates-services-page-js-f70eb4e58ea24339cf0e.js.map

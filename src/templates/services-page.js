@@ -52,3 +52,17 @@
 // };
 
 // export default ServicesPage;
+
+
+import React from "react";
+import "../styles/temporary-index.scss";
+
+export default () => (
+    <div className="container">
+      <h1>Services</h1>
+      <p>Page is not ready yet!</p>
+
+    </div>
+
+
+  )
