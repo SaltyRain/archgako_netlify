@@ -22,11 +22,13 @@
         display: block;
     }
     h2 {
+        font-size: inherit;
         text-transform: uppercase;
         font-weight: 600;
     }
     a {
         display: block;
+        color: inherit;
     }
 }
 
