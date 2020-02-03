@@ -43,6 +43,7 @@ exports.createPages = ({ actions, graphql }) => {
       {
         return false;
       }
+
     });
 
     postOrPage.forEach(edge => {

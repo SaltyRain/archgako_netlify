@@ -16,7 +16,7 @@ export default () => (
         <a href="mailto:archgako@gmail.com">archgako@gmail.com</a>
         <a href="telto:+79111620482">+7 (911) 162 04 82</a>
         <a href="telto:+79216361451">+7 (921) 636 14 51</a>
-        <a href="telto:+393668202233">+39 366 8202 233</a>
+        <a href="telto:+393668202223">+39 366 8202 223</a>
       </div>
 
         <div className="block">
