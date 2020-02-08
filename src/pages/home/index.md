@@ -24,12 +24,12 @@ about:
   sign: Angelina & Ksenia
 newsHeading: Новости
 cities:
-  - cityMapImage: /img/saintpMap.jpg
-    cityMapImageAlt: Карта Санкт-Петербурга
-    cityName: Санкт-Петербург
   - cityMapImage: /img/moscowMap.jpg
     cityMapImageAlt: Карта Москвы
     cityName: Москва
+  - cityMapImage: /img/saintpMap.jpg
+    cityMapImageAlt: Карта Санкт-Петербурга
+    cityName: Санкт-Петербург
   - cityMapImage: /img/milanMap.jpg
     cityMapImageAlt: Карта Милана
     cityName: Милан
