@@ -3,7 +3,7 @@ import Helmet from "react-helmet";
 import { graphql } from "gatsby";
 
 import "../styles";
-// import { Header } from "../components/Header";
+import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 // import { render } from "node-sass";
 
@@ -13,7 +13,7 @@ const Layout = ({ children, headerData = null, footerData = null }) => (
       <html lang="ru" />
       <meta name="keywords" content="architecture, design, архитектурное бюро" />
     </Helmet>
-    {/* <Header data = {headerData}/> */}
+    <Header data = {headerData}/>
     <main className="container-fluid">{children}</main>
     <Footer data = {footerData}/>
   </div>
@@ -57,6 +57,21 @@ export const query = graphql`
       }
     }
 
+    headerData: allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "header"}}}) {
+      edges {
+        node {
+          id
+          frontmatter {
+            menuItems {
+              label
+              linkURL
+            }
+          }
+        }
+      }
+    }
+    
+    
 
   }
   `

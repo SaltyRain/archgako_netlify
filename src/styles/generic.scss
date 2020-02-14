@@ -35,22 +35,11 @@ a:hover {
     color: inherit;
 }
 
-.container {
-    max-width: $container-width;
-    padding: 0 $container-padding;
-    margin: auto;
-}
 
-.section {
-    padding: $section-padding-mobile 0;
-  
-    @include respond-to("small") {
-        padding: $section-padding 0;
-    }
-}
   
 main {
     min-height: calc(100vh - #{$desktop-header-height} - #{$footer-height-desktop});
+    padding-top: 100px;
 }
 
 .visually-hidden {
