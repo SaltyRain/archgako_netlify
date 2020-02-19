@@ -5,21 +5,23 @@ import "../styles/service.scss";
 import Popup from "reactjs-popup";
 
 // import { Button, FormFeedback, Form, FormGroup, Label, Input } from 'reactstrap'
-
+import {Button, FormFeedback, Form, FormGroup, Label, Input } from "react-bootstrap"
 class ServiceTemplate extends Component {
     state = {
         name: '',
         email: '',
-        subject: '',
+        tel: '',
+        objectType: '',
+        square: '',
         message: '',
       }
     handleSubmit(e) {
         e.preventDefault()
-        const { name, email, subject, message } = this.state
+        const { name, email, tel, objectType, square, message } = this.state
         let templateParams = {
           from_name: email,
           to_name: 'archgako@gmail.com',
-          subject: subject,
+          subject: 'Запрос с сайта',
           message_html: message,
          }
          emailjs.send(
@@ -32,10 +34,12 @@ class ServiceTemplate extends Component {
      }
     resetForm() {
         this.setState({
-          name: '',
-          email: '',
-          subject: '',
-          message: '',
+            name: '',
+            email: '',
+            tel: '',
+            objectType: '',
+            square: '',
+            message: '',
         })
       }
     handleChange = (param, e) => {
@@ -59,137 +63,175 @@ class ServiceTemplate extends Component {
                             closeOnDocumentClick
                         >
                              {close => (
-                            <Form onSubmit={this.handleSubmit.bind(this)}>
-                                <FormGroup controlId="formBasicEmail">
-                                <Label className="text-muted">Email address</Label>
-                                <Input
-                                    type="email"
-                                    name="email"
-                                    value={this.state.email}
-                                    className="text-primary"
-                                    onChange={this.handleChange.bind(this, 'email')}
-                                    placeholder="Enter email"
-                                />
-                                </FormGroup>
-                    <FormGroup controlId="formBasicName">
-                                <Label className="text-muted">Name</Label>
-                                <Input
-                                    type="text"
-                                    name="name"
-                                    value={this.state.name}
-                                    className="text-primary"
-                                    onChange={this.handleChange.bind(this, 'name')}
-                                    placeholder="Name"
-                                />
-                                </FormGroup>
-                    <FormGroup controlId="formBasicSubject">
-                                <Label className="text-muted">Subject</Label>
-                                <Input
-                                    type="text"
-                                    name="subject"
-                                    className="text-primary"
-                                    value={this.state.subject}
-                                    onChange={this.handleChange.bind(this, 'subject')}
-                                    placeholder="Subject"
-                                />
-                                </FormGroup>
-                    <FormGroup controlId="formBasicMessage">
-                                <Label className="text-muted">Message</Label>
-                                <Input
-                                    type="textarea"
-                                    name="message"
-                                    className="text-primary"
-                                    value={this.state.message}
-                                    onChange={this.handleChange.bind(this, 'message')}
-                                />
-                                </FormGroup>
-                    <Button variant="primary" type="submit">
-                                Submit
-                                </Button>
-                            </Form>       
-                //             <form className="form container">
-                //             <a className="close" onClick={close}>
-                //             &times;
-                //             </a>
-                //                 <div className="form__wrapper">
-                //                 <h4 class="visually-hidden">Форма обратной связи</h4>
+                    //         <Form onSubmit={this.handleSubmit.bind(this)}>
+                    //             <FormGroup controlId="formBasicEmail">
+                    //             <Label className="text-muted">Email address</Label>
+                    //             <Input
+                    //                 type="email"
+                    //                 name="email"
+                    //                 value={this.state.email}
+                    //                 className="text-primary"
+                    //                 onChange={this.handleChange.bind(this, 'email')}
+                    //                 placeholder="Enter email"
+                    //             />
+                    //             </FormGroup>
+                    // <FormGroup controlId="formBasicName">
+                    //             <Label className="text-muted">Name</Label>
+                    //             <Input
+                    //                 type="text"
+                    //                 name="name"
+                    //                 value={this.state.name}
+                    //                 className="text-primary"
+                    //                 onChange={this.handleChange.bind(this, 'name')}
+                    //                 placeholder="Name"
+                    //             />
+                    //             </FormGroup>
+                    // <FormGroup controlId="formBasicSubject">
+                    //             <Label className="text-muted">Subject</Label>
+                    //             <Input
+                    //                 type="text"
+                    //                 name="subject"
+                    //                 className="text-primary"
+                    //                 value={this.state.subject}
+                    //                 onChange={this.handleChange.bind(this, 'subject')}
+                    //                 placeholder="Subject"
+                    //             />
+                    //             </FormGroup>
+                    // <FormGroup controlId="formBasicMessage">
+                    //             <Label className="text-muted">Message</Label>
+                    //             <Input
+                    //                 type="textarea"
+                    //                 name="message"
+                    //                 className="text-primary"
+                    //                 value={this.state.message}
+                    //                 onChange={this.handleChange.bind(this, 'message')}
+                    //             />
+                    //             </FormGroup>
+                    // <Button variant="primary" type="submit">
+                    //             Submit
+                    //             </Button>
+                    //         </Form>       
+                            <form className="form container">
+                            <a className="close" onClick={close}>
+                            &times;
+                            </a>
+                                <div className="form__wrapper">
+                                <h4 class="visually-hidden">Форма обратной связи</h4>
 				
-                // <div class="row">
-                //     <div class="col">
+                <div class="row">
+                    <div class="col">
             
-                //         <div class="form__item">
-                //             <label for="name" class="visually-hidden">Имя</label>
-                //             <input type="text" placeholder="Ваше имя*" name="name" required/>
-                //         </div>
+                        <div class="form__item">
+                            <label for="name" class="visually-hidden">Имя</label>
+                            <input type="text" 
+                            placeholder="Ваше имя*"
+                            type="text"
+                            name="name" 
+                            value={this.state.name}
+                            onChange={this.handleChange.bind(this, 'name')}
+                            required/>
+                        </div>
             
-                //     </div>
-                // </div>
+                    </div>
+                </div>
             
-                // <div class="row">
-                //     <div class="col">
+                <div class="row">
+                    <div class="col">
             
-                //         <div class="form__item">
-                //             <label for="phone" class="visually-hidden">Телефон</label>
-                //             <input type="text" placeholder="Телефон*" name="phone" required/>
-                //         </div>
+                        <div class="form__item">
+                            <label for="phone" class="visually-hidden">Телефон</label>
+                            <input 
+                            type="text" 
+                            placeholder="Телефон*" 
+                            name="phone" 
+                            value={this.state.tel}
+                            onChange={this.handleChange.bind(this, 'tel')}
+                            required/>
+                        </div>
             
-                //     </div>
-                // </div>
+                    </div>
+                </div>
             
-                // <div class="row">
-                //     <div class="col">
+                <div class="row">
+                    <div class="col">
             
-                //         <div class="form__item">
-                //             <label for="email" class="visually-hidden">Электронная почта</label>
-                //             <input type="text" placeholder="Электронная почта*" name="email" required/>
-                //         </div>
+                        <div class="form__item">
+                            <label for="email" class="visually-hidden">Электронная почта</label>
+                            <input type="text" 
+                            placeholder="Электронная почта*" 
+                            name="email" 
+                            type="email"
+                            value={this.state.email}
+                            onChange={this.handleChange.bind(this, 'email')}
+                            required/>
+                        </div>
             
-                //     </div>
-                // </div>
+                    </div>
+                </div>
             
-                // <div class="row">
-                //     <div class="col">
+                <div class="row">
+                    <div class="col">
             
-                //         <div class="form__item">
-                //             <label for="name" class="visually-hidden">Тип объекта</label>
-                //             <input type="text" placeholder="Тип объекта" name="name"/>
-                //         </div>
+                        <div class="form__item">
+                            <label for="typeObject" class="visually-hidden">Тип объекта</label>
+                            <input 
+                            type="text" 
+                            placeholder="Тип объекта" 
+                            name="typeObject"
+                            value={this.state.objectType}
+                            onChange={this.handleChange.bind(this, 'objectType')}
+                            
+                            />
+
+                        </div>
             
-                //     </div>
-                // </div>
+                    </div>
+                </div>
             
-                // <div class="row">
-                //     <div class="col">
+                <div class="row">
+                    <div class="col">
             
-                //         <div class="form__item">
-                //             <label for="name" class="visually-hidden">Площадь</label>
-                //             <input type="text" placeholder="Площадь, м²" name="name"/>
-                //         </div>
+                        <div class="form__item">
+                            <label for="square" class="visually-hidden">Площадь</label>
+                            <input type="text"
+                             placeholder="Площадь, м²" 
+                             name="square"
+                             value={this.state.square}
+                            onChange={this.handleChange.bind(this, 'square')}
+                             />
+                        </div>
             
-                //     </div>
-                // </div>
+                    </div>
+                </div>
             
-                // <div class="row">
-                //     <div class="col">
+                <div class="row">
+                    <div class="col">
             
-                //         <div class="form__item">
-                //             <label for="name" class="visually-hidden">Комментарий</label>
-                //             <input type="textarea" placeholder="Комментарий" name="name"/>
-                //         </div>
+                        <div class="form__item">
+                            <label for="message" class="visually-hidden">Комментарий</label>
+                            <input type="textarea" p
+                            placeholder="Комментарий" 
+                            name="message"
+                            value={this.state.message}
+                            onChange={this.handleChange.bind(this, 'message')}
+
+                            
+                            />
+                        </div>
             
-                //     </div>
-                // </div>
+                    </div>
+                </div>
             
-                // <div class="row">
-                //     <div class="col">
-                //         <button type="submit" class="form__button button ">Отправить</button>
-                //     </div>
-                // </div> 
-                //                 </div>
+                <div class="row">
+                    <div class="col">
+                        <button type="submit" class="form__button button ">Отправить</button>
+                    </div>
+                </div> 
+                                </div>
 
 
 
-                //             </form>
+                            </form>
                             )}
                         </Popup>
 

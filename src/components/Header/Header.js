@@ -10,12 +10,14 @@ export const HeaderTemplate = ({ data }) => {
     <header className="header container-fluid">
       <div className="row justify-content-between align-items-center">
         <div className="col-md-4 col-10">
-          <Link to="/">
+        <Link to="/">
             <div className="header__logo">
+            
               <span className="header__logo_archgako">ARCHGAKÒ</span>
               <span className="header__logo_sign">architecture and design company</span>
             </div>
-          </Link>
+       </Link>
+          
         </div>
 
       <div className="col-md-8 col-2">
