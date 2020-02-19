@@ -48,7 +48,7 @@ export const HomePageTemplate = ({ home, news = null}) => {
                 </div>
             </section>
 
-            <section className="news">
+            <section className="news" id="news">
                 <h2 className="news__title section__title">{home.newsHeading}</h2>
                 <div className="row">
                 {
@@ -64,7 +64,7 @@ export const HomePageTemplate = ({ home, news = null}) => {
 
             </section>
 
-            <section className="cities">
+            <section className="cities" id="contacts">
             <h2 className="visually-hidden">Города, в которых мы работаем</h2>
                 {
                     cities.length > 0 && (

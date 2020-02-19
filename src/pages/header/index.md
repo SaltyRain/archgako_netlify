@@ -2,11 +2,11 @@
 templateKey: header
 menuItems:
   - label: О нас
-    linkURL: '/#about'
+    linkURL: /#about
   - label: Новости
-    linkURL: '/#news'
+    linkURL: /#news
   - label: Контакты
-    linkURL: '/#contacts'
+    linkURL: /#contacts
   - label: Проекты
     linkURL: /projects
   - label: Услуги

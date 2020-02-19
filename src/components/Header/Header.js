@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "gatsby";
+// import { Link, animateScroll as scroll} from "react-scroll";
 
 import "../../styles/header.scss";
 
@@ -23,6 +24,18 @@ export const HeaderTemplate = ({ data }) => {
             <ul>
               {data.menuItems.map(menuItem => (
                 <li key={menuItem.linkURL} className="header__desktop-nav_item">
+                  {/* <Link
+                    // className="nav-link"
+                    activeClass="active"
+                    to={menuItem.linkURL}
+                    // to="about"
+                    spy={true}
+                    smooth={true}
+                    offset={-70}
+                    duration={500}
+                    >
+                      {menuItem.label}
+                  </Link> */}
                   <Link to={menuItem.linkURL}>{menuItem.label}</Link>
                 </li>
               ))}

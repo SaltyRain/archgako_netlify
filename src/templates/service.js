@@ -1,36 +1,27 @@
-// import React, { Component } from "react";
+import React, { Component } from "react";
 // import PropTypes from "prop-types";
-// import "../styles/service.scss";
+import "../styles/service.scss";
 
-// class ServiceTemplate extends Component {
-//     render () {
-//         return (
-//             <section className="service">
-//                 <div className="row">
-//                     <div className="col-12 col-6">
-//                         <h3 className="service__title">{this.props.service.title}</h3>
-//                         <button className="service__mail-button" type="button"></button>
-//                     </div>
-//                 </div>
+class ServiceTemplate extends Component {
+    render () {
+        return (
+            <div className="col">
+                <section className="service">
+                    <div className="service__wrapper">
+                        <h2 className="service__price">{this.props.service.price} ₽ / м<sup>2</sup> </h2>
+                        <span className="service__item">{this.props.service.deadline}</span>
+                        <span className="service__item">{this.props.service.row1}</span>
+                        <span className="service__item">{this.props.service.row2}</span>
+                        <span className="service__item">{this.props.service.row3}</span>
+                        <span className="service__item">{this.props.service.row4}</span>
+                        <button className="service__button">{this.props.service.buttontext}</button>
+                    </div>
+                </section>
+            </div>
 
-//                 <div className="col-12 col-md-6">
-//                     <div className="service__smalltext">
-//                         <span className="service__smalltext_black">сроки выполнения</span>
-//                         <span className="service__smalltext_white">{this.props.service.deadlines}</span>
-//                         <span className="service__smalltext_black">что включает</span>
-
-
-//                     </div>
-//                     <div className="service__bigtext">
-//                         <span 
-//                     </div>
-//                 </div>
-
-                
-//             </section>
-//         )
-//     }
-// }
+        )
+    }
+}
 
 // ProjectTemplate.propTypes = {
 //     project: PropTypes.shape({
@@ -39,4 +30,4 @@
 //     }),
 // };
 
-// export default ServiceTemplate;
+export default ServiceTemplate;

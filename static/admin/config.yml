@@ -36,6 +36,28 @@ collections:
               { label: Scheme Description, name: schemeAlt, widget: string },
             ],
       }
+      - {label: Emplication Heading, name: emplicationHeading, widget: string}
+      - {label: Emplication, 
+          name: emplication, 
+          widget: list,
+          field:
+          [
+            label: Emplication Text, name: emplicationText, widget: "string",
+          ],
+          }
+
+          
+        # - { label: "Cities",
+        #       name: "cities",
+        #       widget: "list",
+        #       fields: 
+        #       [
+        #         { label: "City Name", name: "cityName", widget: "string" },
+        #         { label: "City Map Image", name: "cityMapImage", widget: "image" },
+        #         { label: "City Map Alt", name: "cityMapImageAlt", wigget: "string"},
+        #       ],
+        #   }
+      
 
   - name: newsBlock
     label: News
@@ -43,6 +65,7 @@ collections:
     create: true
     fields: 
       - { label: "Template Key", name: "templateKey", widget: "hidden", default: "news-block"}
+      - {label: Title, name: title, widget: string}
       - { label: Title, name: title, widget: string }
       - { label: Image, name: image, widget: image }
       - { label: ImageAlt, name: imageAlt, widget: string }
@@ -52,13 +75,16 @@ collections:
     label: Services
     folder: src/pages/services
     create: true
-    fields:
+    fields: 
+      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "service"}
       - {label: Title, name: title, widget: string}
-      - {label: Render Image, name: renderImage, widget: image}
-      - {label: Render Description, name: renderDescription, widget: string}
-      - {label: Description, name: description, widget: text}
-      - {label: Scheme Image, name: schemeImage, widget: image}
-      - {label: Scheme Description, name: schemeDescription, widget: string}
+      - {label: Price, name: price, widget: string}
+      - {label: Deadline, name: deadline, widget: string}
+      - {label: Row1, name: row1, widget: string}
+      - {label: Row2, name: row2, widget: string}
+      - {label: Row3, name: row3, widget: string}
+      - {label: Row4, name: row4, widget: string}
+      - {label: ButtonText, name: buttontext, widget: string}
 
   - name: "pages"
     label: "Pages"

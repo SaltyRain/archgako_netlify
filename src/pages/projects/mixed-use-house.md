@@ -14,5 +14,10 @@ description: >-
 scheme:
   schemeAlt: Схема Mixed use house
   schemeImage: /img/4.jpg
+emplicationHeading: Эмпликация помещения
+emplication:
+  - emplicationText: текст1
+  - emplicationText: текст2
+  - emplicationText: текст3
 ---
 

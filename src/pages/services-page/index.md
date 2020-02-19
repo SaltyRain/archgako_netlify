@@ -1,10 +1,10 @@
 ---
 templateKey: services-page
-title: Проекты
+title: Услуги
 path: /services
 seo:
-  browserTitle: ARCHGAKO | Проекты
-  description: Проекты архитектурного бюро ARCHGAKO
-  title: ARCHGAKO | Проекты
+  browserTitle: ARCHGAKO | Услуги
+  description: Услуги архитектурного бюро ARCHGAKO
+  title: ARCHGAKO | Услуги
 ---
 Проверка тега BODY

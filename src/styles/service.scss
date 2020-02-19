@@ -1,0 +1,39 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+.service {
+    position: relative;
+    // background-color: $light-brown;
+    border: 3px solid $light-brown;
+    width: 275px;
+    height: 400px;
+    text-align: center;
+    // margin-top: 60px;
+    // padding-top: 400px;
+    margin: auto;
+    &__wrapper {
+        padding: 40px 0 0 0;
+    }
+    &__price {
+        font-size: 28px;
+        margin-bottom: 18px;
+    }
+    span {
+        display: block;
+    }
+    &__item {
+        margin-bottom: 14px;
+    }
+    &__button {
+        margin-top: 40px;
+    }
+}
+
+.service {
+    &:nth-child(4) {
+        &__button {
+            margin-bottom: 20px;
+    }
+
+    }
+}

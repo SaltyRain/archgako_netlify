@@ -14,7 +14,7 @@ export const ProjectsPageTemplate = ({
     return (
         <article className="projects">
             <div className="projects__container">
-                <h1 className="projects__title visually-hidden">{title}</h1>
+                <h1 className="projects__title visually-hidden" id="projects">{title}</h1>
                 {
                     projects && projects.map((project, index) => (
                         <ProjectTemplate
@@ -94,6 +94,10 @@ export const ProjectsQuery = graphql `
                 schemeImage
                 schemeAlt
               }
+              emplicationHeading
+              emplication {
+              emplicationText
+                }
             }
           }
         }
