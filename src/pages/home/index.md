@@ -1,0 +1,41 @@
+---
+templateKey: home-page
+archgakoLogo: ARCHGAKÒ
+archgakoSign: architecture and design company
+about:
+  aboutHeading: О нас
+  ourPhoto: /img/we.jpg
+  ourPhotoAlt: Фото основателей студии ARCHGAKO
+  paragraph1: >-
+    Мы основатели студии <b>ARCHGAKÒ</b>, с <b>2017</b> года наша студия создает
+    интерьерные и архитектурные проекты. Для каждого проекта мы придумываем свою
+    философию вместе с заказчиком - это позволяет нам создавать неповторимые
+    проекты, которые наполнены особой атмосферой и создают для вас комфортную
+    среду.
+  paragraph2: >-
+    Для нас важно качество работы, качество используемых материалов и конечно же
+    <b>итоговый результат</b>, поэтому каждому этапу проекта мы уделяем особое
+    внимание. Мы стараемся, чтобы наша работы прошла быстро, приятно,
+    соответствовала поставленному бюджету и принесла желаемый результат.
+  paragraph3: >-
+    Наша студия постоянно развивается и совершенствуется в своих навыках,
+    следует тенденциям и последним новинкам мира <b>архитектуры и дизайна</b>,
+    поэтому мы готовы к смелым экспериментам и воплощению самых необычных идей.
+  sign: Angelina & Ksenia
+newsHeading: Новости
+cities:
+  - cityMapImage: /img/moscowMap.jpg
+    cityMapImageAlt: Карта Москвы
+    cityName: Москва
+  - cityMapImage: /img/saintpMap.jpg
+    cityMapImageAlt: Карта Санкт-Петербурга
+    cityName: Санкт-Петербург
+  - cityMapImage: /img/milanMap.jpg
+    cityMapImageAlt: Карта Милана
+    cityName: Милан
+seo:
+  browserTitle: ARCHGAKO | Главная
+  description: Architecture and design company
+  title: ARCHGAKO
+---
+

@@ -1,0 +1,31 @@
+@import "./fonts.scss";
+
+$light-brown: #c7c2bc;
+$brown: #86827d;
+$light: #ffffff;
+$dark: #000000;
+$bgcolor: #e4e4e4;
+
+$background-brown: $light-brown;
+$background-light: $light;
+
+$menu-active: $light-brown;
+
+$body-light: $light;
+$body-dark: $dark;
+
+$cormorant-regular: "Cormorant-Regular", Arial, Helvetica, sans-serif;
+$aesthetic-white: "Aesthetic-White", Arial, Helvetica, sans-serif;
+$antic-didone: "Antic Didone", serif;
+
+
+
+$desktop-header-height: 100px;
+$mobile-header-height: 50px;
+$container-width: 1440px;
+$container-padding: 40px;
+$section-padding: 80px;
+$section-padding-mobile: 40px;
+$footer-height-desktop: 200px;
+$footer-height-mobile: 300px;
+$transition-duration: 250ms;

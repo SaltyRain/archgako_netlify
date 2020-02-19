@@ -1,0 +1,26 @@
+@import "./variables.scss";
+@import "./mixins.scss";
+
+.project {
+    &__render {
+        max-height: 400px;
+        width: auto;
+    }
+    &__description {
+        margin: 28px 28px 28px 0;
+        float: right;
+        text-align: right;
+        max-width: 460px;
+    }
+    &__title {
+        text-transform: uppercase;
+        // margin-bottom: 8px;
+    }
+    &__year {
+        display: block;
+        margin: 10px 0 4px 0;
+    }
+    &__scheme {
+        margin: 4% 0 10% 0;
+    }
+}
