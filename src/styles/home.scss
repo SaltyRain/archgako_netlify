@@ -123,6 +123,14 @@
             text-transform: uppercase;
         }
     }
+    &__founders {
+        font-size: 1.2em;
+    }
+    &__founder-text {
+        margin-top: 1em;
+        margin-bottom: 0.7em;
+        list-style-type: circle;
+    }
     &__sign {
         font-family: $aesthetic-white;
         text-align: center;
