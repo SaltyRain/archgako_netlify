@@ -1,15 +1,18 @@
 @import "./variables.scss";
 @import "./mixins.scss";
 
+.col {
+    padding: 20px;;
+}
 .service {
-    position: relative;
+    // position: relative;
     // background-color: $light-brown;
     border: 3px solid $light-brown;
     width: 275px;
     height: 400px;
+    // margin-left: 2%;
+    // margin-bottom: 26px;
     text-align: center;
-    // margin-top: 60px;
-    // padding-top: 400px;
     margin: auto;
     &__wrapper {
         padding: 40px 0 0 0;
@@ -28,12 +31,43 @@
         margin-top: 40px;
     }
 }
+body .service__button {
+    background-color: $light-brown;
+}
 
 .service {
     &:nth-child(4) {
         &__button {
             margin-bottom: 20px;
+           
     }
 
     }
+}
+
+.form {
+    // margin: 10px;
+    &__wrapper {
+        background-color: $light-brown;
+        // padding: -20px;
+        margin: 20px 10px;
+        padding: 10px 0;
+        // margin: 100px;
+    }
+    &__button {
+        background-color: red;
+    }
+    // padding: 10px;
+    // max-width: 200px;
+    // width: 100px;
+
+}
+
+.close {
+    margin-top: -25px;
+    margin-right: -10px;
+    cursor: pointer;
+}
+.popup-overlay > .popup-content {
+    width: 250px;
 }

@@ -25,17 +25,17 @@ export const HomePageTemplate = ({ home, news = null}) => {
             
             <section className="about" id="about">
                 <div className="row">
-                    <div className="col-12 col-md-6 order-md-first">
+                    <div className="col-12 col-lg-8 order-lg-first">
                     <h2 className="about__title section__title">{home.about.aboutHeading}</h2>
                         <div className="about__description">
                             
                             <p className="about__p">{home.about.paragraph1}</p>
                             <p className="about__p">{home.about.paragraph2}</p>
-                            <p className="about__p about__p_uppercase">{home.about.paragraph3}</p>
-                            <span className="about__sign">{home.about.sign}</span> 
+                            <p className="about__p">{home.about.paragraph3}</p>
+                            
                         </div>
                     </div>
-                    <div className="col-12 order-first col-md-6 align-self-center">
+                    <div className="col-12 order-first col-lg-4 align-self-center">
                         <div className="about__photo">
                             <img
                                 src={home.about.ourPhoto}
@@ -43,9 +43,12 @@ export const HomePageTemplate = ({ home, news = null}) => {
                             />
                         </div>
                     </div>
-
-
                 </div>
+                <div className="row">
+                        <div className="col">
+                        <span className="about__sign">{home.about.sign}</span> 
+                        </div>
+                    </div>
             </section>
 
             <section className="news" id="news">
@@ -138,7 +141,7 @@ export const pageQuery = graphql `
               node {
                 frontmatter {
                   title
-                  image
+                  image 
                   imageAlt
                   link
                 }
@@ -156,7 +159,7 @@ export const pageQuery = graphql `
                   archgakoSign
                   about {
                     aboutHeading
-                    ourPhoto
+                    ourPhoto 
                     ourPhotoAlt
                     paragraph1
                     paragraph2
@@ -166,7 +169,7 @@ export const pageQuery = graphql `
                   newsHeading
                   cities {
                     cityName
-                    cityMapImage
+                    cityMapImage 
                     cityMapImageAlt
                   }
                   seo {

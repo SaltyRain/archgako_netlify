@@ -1,6 +1,7 @@
 @import "./variables.scss";
 @import "./mixins.scss";
 
+
 .services {
     margin: auto;
     text-align: center;
@@ -10,4 +11,8 @@
         font-size: 1.7rem;
         margin-bottom: 30px;
     }
+}
+
+.services .service:nth-child(3) {
+    background-color: red;
 }

@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Helmet from "react-helmet";
 
+
 import ServiceTemplate from "./Service";
 import Layout from "../components/Layout";
 import "../styles/services-page.scss"
@@ -25,7 +26,9 @@ export const ServicesPageTemplate = ({
             }
             </div>
 
+
         </article>
+
 
 
     )

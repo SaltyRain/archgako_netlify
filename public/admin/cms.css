@@ -13634,11 +13634,20 @@ main {
   clip: rect(0 0 0 0);
   overflow: hidden; }
 
-.button-reset {
+.button {
   font-size: 100%;
   font-family: inherit;
   border: 0;
-  padding: 0; }
+  padding: 0;
+  background-color: #ffffff;
+  width: 160px;
+  height: 40px; }
+  .button:hover {
+    background-color: #af988a;
+    -webkit-transition-duration: 0.3s;
+            transition-duration: 0.3s; }
+  .button:active {
+    background-color: #af988a; }
 
 /*! minireset.css v0.0.3 | MIT License | github.com/jgthms/minireset.css */
 html,
@@ -14025,13 +14034,14 @@ th {
 .about {
   background-color: #c7c2bc;
   margin-bottom: 10%;
-  text-align: center; }
+  padding: 16px;
+  text-align: left; }
   .about__title {
     display: block;
     text-align: left; }
   .about__description {
-    margin-left: 10%;
-    margin-top: 8%;
+    margin-left: 2%;
+    margin-top: 4%;
     padding: 0 3%; }
     .about__description_uppercase {
       text-transform: uppercase; }
@@ -14041,12 +14051,12 @@ th {
       text-transform: uppercase; }
   .about__sign {
     font-family: "Aesthetic-White", Arial, Helvetica, sans-serif;
+    text-align: center;
     font-size: 2em;
-    display: block;
-    margin-top: 20%;
-    margin-bottom: 10%; }
+    display: block; }
   .about__photo {
-    padding: 4%; }
+    padding: 4%;
+    text-align: center; }
     .about__photo img {
       max-height: 600px; }
 
@@ -14073,8 +14083,7 @@ th {
     margin-top: 0;
     padding: 0 4%; }
   .about__sign {
-    margin-top: 10%;
-    margin-bottom: 10%; }
+    text-align: center; }
   .about__photo {
     padding: 10%; } }
 

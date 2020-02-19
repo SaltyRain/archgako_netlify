@@ -3,7 +3,7 @@ templateKey: project
 title: Mixed use house
 render:
   renderAlt: дизайн mixed use house
-  renderImage: /img/3562346.jpg
+  renderImage: img/3562346.jpg
 year: '2019'
 description: >-
   Жилой комплекс разработан с целью совместить рабочую и жилую функции, что
@@ -13,7 +13,7 @@ description: >-
   прозрачности, раскрывая тем самым общественную функцию.
 scheme:
   schemeAlt: Схема Mixed use house
-  schemeImage: /img/4.jpg
+  schemeImage: img/4.jpg
 emplicationHeading: Эмпликация помещения
 emplication:
   - emplicationText: текст1

@@ -2,6 +2,7 @@ import React from "react";
 // import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Helmet from "react-helmet";
+import Img from "gatsby-image";
 
 import ProjectTemplate from "./project";
 import Layout from "../components/Layout";
@@ -85,13 +86,13 @@ export const ProjectsQuery = graphql `
             frontmatter {
               title
               render {
-                renderImage
+                renderImage 
                 renderAlt
               }
               year
               description
               scheme {
-                schemeImage
+                schemeImage 
                 schemeAlt
               }
               emplicationHeading

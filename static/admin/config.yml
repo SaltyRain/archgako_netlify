@@ -13,7 +13,7 @@ collections:
     create: true
     fields:
       - { label: "Template Key", name: "templateKey", widget: "hidden", default: "project" }
-      - {label: Title, name: title, widget: string}
+      - {label: Title, name: title, widget: string }
       - {
           label: "Render",
           name: "render",
