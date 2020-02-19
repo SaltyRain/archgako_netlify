@@ -1,0 +1,251 @@
+backend:
+  name: github
+  repo: SaltyRain/archgako_netlify
+
+media_folder: static/img
+public_folder: /img
+
+collections:
+  - name: projects
+    label: Projects
+    description: All ARCHGAKO projects
+    folder: src/pages/projects
+    create: true
+    fields:
+      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "project" }
+      - {label: Title, name: title, widget: string }
+      - {
+          label: "Render",
+          name: "render",
+          widget: "object",
+          fields: 
+            [
+              { label: Render Image, name: renderImage, widget: image },
+              { label: Render Description, name: renderAlt, widget: string },
+            ],
+      }
+      - {label: Year, name: year, widget: string}
+      - {label: Description, name: description, widget: markdown}
+      - {
+          label: "Scheme",
+          name: "scheme",
+          widget: "object",
+          fields: 
+            [
+              { label: Scheme Image, name: schemeImage, widget: image },
+              { label: Scheme Description, name: schemeAlt, widget: string },
+            ],
+      }
+      - {label: Emplication Heading, name: emplicationHeading, widget: string}
+      - {label: Emplication, 
+          name: emplication, 
+          widget: list,
+          field:
+          [
+            label: Emplication Text, name: emplicationText, widget: "string",
+          ],
+          }
+
+          
+        # - { label: "Cities",
+        #       name: "cities",
+        #       widget: "list",
+        #       fields: 
+        #       [
+        #         { label: "City Name", name: "cityName", widget: "string" },
+        #         { label: "City Map Image", name: "cityMapImage", widget: "image" },
+        #         { label: "City Map Alt", name: "cityMapImageAlt", wigget: "string"},
+        #       ],
+        #   }
+      
+
+  - name: newsBlock
+    label: News
+    folder: src/pages/news
+    create: true
+    fields: 
+      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "news-block"}
+      - {label: Title, name: title, widget: string}
+      - { label: Title, name: title, widget: string }
+      - { label: Image, name: image, widget: image }
+      - { label: ImageAlt, name: imageAlt, widget: string }
+      - { label: Link, name: link, widget: string }
+    
+  - name: services
+    label: Services
+    folder: src/pages/services
+    create: true
+    fields: 
+      - { label: "Template Key", name: "templateKey", widget: "hidden", default: "service"}
+      - {label: Title, name: title, widget: string}
+      - {label: Price, name: price, widget: string}
+      - {label: Deadline, name: deadline, widget: string}
+      - {label: Row1, name: row1, widget: string}
+      - {label: Row2, name: row2, widget: string}
+      - {label: Row3, name: row3, widget: string}
+      - {label: Row4, name: row4, widget: string}
+      - {label: ButtonText, name: buttontext, widget: string}
+
+  - name: "pages"
+    label: "Pages"
+    files:
+      - file: "src/pages/home/index.md"
+        label: "Home"
+        name: "home"
+        fields:
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "home-page" }
+          - { label: "Archgako Logo", name: "archgakoLogo", widget: "string"}
+          - { label: "Archgako Sign", name: "archgakoSign", widget: "string"}
+          - { label: "About",
+              name: "about",
+              widget: "object",
+              fields:
+                [
+                  { label: "About Heading", name: "aboutHeading", widget: "string" },
+                  { label: "Paragraph 1", name: "paragraph1", widget: "markdown"},
+                  { label: "Paragraph 2", name: "paragraph2", widget: "markdown"},
+                  { label: "Paragraph 3", name: "paragraph3", widget: "markdown"},
+
+                  { label: "Sign", name: "sign", widget: "string"},
+
+                  { label: "Our Photo", name: "ourPhoto", widget: "image"},
+                  { label: "Out Photo Alt", name: "ourPhotoAlt", widget: "string"},
+                ]
+          }
+          - { label: "News Heading", name: "newsHeading", widget: "string"}
+          - { label: "Cities",
+              name: "cities",
+              widget: "list",
+              fields: 
+              [
+                { label: "City Name", name: "cityName", widget: "string" },
+                { label: "City Map Image", name: "cityMapImage", widget: "image" },
+                { label: "City Map Alt", name: "cityMapImageAlt", wigget: "string"},
+              ],
+          }
+          - {
+            label: "SEO & Meta",
+            name: "seo",
+            widget: "object",
+            fields: [
+              { label: "Browset Tab Title", name: "browserTitle", widtet: "string" },
+              { label: "Title", name: "title", widget: "string" },
+              { label: "Description", name: "description", widget: "string" },
+            ],
+          }
+      - file: "src/pages/projects-page/index.md"
+        label: "Projects"
+        name: "projects"
+        fields: 
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "projects-page" }
+          - { label: "Title", name: "title", widget: "string" }
+          - {
+                label: "SEO & Meta",
+                name: "seo",
+                widget: "object",
+                fields:
+                  [
+                    { label: "Browser Tab Title", name: "browserTitle", widget: "string"},
+                    { label: "Title", name: "title", widget: "string" },
+                    { label: "Description", name: "description", widget: "string" },
+                  ],
+              }
+      - file: "src/pages/services-page/index.md"
+        label: "Services"
+        name: "services"
+        fields: 
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "services-page" }
+          - { label: "Title", name: "title", widget: "string" }
+          - {
+                label: "SEO & Meta",
+                name: "seo",
+                widget: "object",
+                fields:
+                  [
+                    { label: "Browser Tab Title", name: "browserTitle", widget: "string"},
+                    { label: "Title", name: "title", widget: "string" },
+                    { label: "Description", name: "description", widget: "string" },
+                  ],
+              }
+
+
+      
+
+  - name: "headerAndFooter"
+    label: "Header & Footer"
+    files:
+      - file: "src/pages/header/index.md"
+        name: "header"
+        label: "Header"
+        fields: 
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "header-component" }
+          - {
+              label: "Menu Items",
+              name: "menuItems",
+              widget: "list",
+              fields:
+                [
+                  { label: "Label", name: "label", widget: "string" },
+                  { label: "Link URL", name: "linkURL", widget: "string", hint: "Use a relative URL (e.g. /about) if the link is an internal link." },
+                ],
+          }
+      - file: "src/pages/footer/index.md"
+        name: "footer"
+        label: "Footer"
+        fields:
+          - { label: "Template Key", name: "templateKey", widget: "hidden", default: "footer-component" }
+          - {label: Title, name: title, widget: string}
+          - {
+              label: "Contact Items",
+              name: "contactItems",
+              widget: "list",
+              fields:
+                [
+                  { label: "Label", name: "label", widget: "string" },
+                  { label: "Link URL", name: "contact", widget: "string", hint: "Use a relative URL (e.g. /about) if the link is an internal link." },
+                ],
+          }
+          - {
+              label: "Social Links",
+              name: "socialLinks",
+              widget: "list",
+              fields:
+                [
+                  { label: "Label", name: "label", widget: "string" },
+                  { label: "Link URL", name: "linkURL", widget: "string", hint: "Use a relative URL (e.g. /about) if the link is an internal link." },
+                ],
+          }
+
+
+      # - file: "src/pages/projects-page/index.md"
+      #   label: "Projects"
+      #   name: "projects"
+      #   fields: 
+      #     - { label: "Template Key", name: "templateKey", widget: "hidden", default: "projects-page" },
+      #     - { label: "Title", name: "title", widget: "string"}
+      #     - {
+      #       label: "SEO & Meta",
+      #       name: "seo",
+      #       widget: "object",
+      #       fields: [
+      #         { label: "Browset Tab Title", name: "browserTitle", widtet: "string" },
+      #         { label: "Title", name: "title", widget: "string" },
+      #         { label: "Description", name: "description", widget: "string" },
+      #       ],
+      #     }
+      # - file: "src/pages/services/index.md"
+      #   label: "Services"
+      #   name: "services"
+      #   fields:
+      #     - { label: "Template Key", name: "templateKey", widget: "hidden", default: "services-page" },
+      #     - { label: "Title", name: "title", widget: "string"}
+      #     - {
+      #       label: "SEO & Meta",
+      #       name: "seo",
+      #       widget: "object",
+      #       fields: [
+      #         { label: "Browset Tab Title", name: "browserTitle", widtet: "string" },
+      #         { label: "Title", name: "title", widget: "string" },
+      #         { label: "Description", name: "description", widget: "string" },
+      #       ],
+      #     }

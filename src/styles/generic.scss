@@ -31,22 +31,15 @@ a {
     text-decoration: none;
 }
 
-.container {
-    max-width: $container-width;
-    padding: 0 $container-padding;
-    margin: auto;
+a:hover {
+    color: inherit;
 }
 
-.section {
-    padding: $section-padding-mobile 0;
-  
-    @include respond-to("small") {
-        padding: $section-padding 0;
-    }
-}
+
   
 main {
     min-height: calc(100vh - #{$desktop-header-height} - #{$footer-height-desktop});
+    padding-top: 100px;
 }
 
 .visually-hidden {
@@ -63,6 +56,24 @@ main {
 .button-reset {
     font-size: 100%;
     font-family: inherit;
+    background-color: #fff;
     border: 0;
     padding: 0;
+}
+
+.button {
+    font-size: 100%;
+    font-family: inherit;
+    border: 0;
+    padding: 0;
+    background-color: $light;
+        width: 160px;
+        height: 40px;
+        &:hover {
+            background-color: $brown;
+            transition-duration: 0.3s;
+        }
+        &:active {
+            background-color: $brown;
+        }
 }

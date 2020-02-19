@@ -1,6 +1,8 @@
 const _ = require("lodash");
 const path = require("path");
 const { createFilePath } = require("gatsby-source-filesystem");
+// const { fmImagesToRelative } = require('gatsby-remark-relative-images');
+
 
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions;
@@ -32,9 +34,11 @@ exports.createPages = ({ actions, graphql }) => {
     const postOrPage = result.data.allMarkdownRemark.edges.filter(edge => {
       if (edge.node.frontmatter.templateKey === "header") {
         return false;
-      } else if (edge.node.frontmatter.templateKey === "footer") {
+      } 
+      else if (edge.node.frontmatter.templateKey === "footer") {
         return false;
-      } else if (edge.node.frontmatter.templateKey == "news-block") {
+      } 
+      else if (edge.node.frontmatter.templateKey == "news-block") {
         return false;
       } else {
         return !Boolean(edge.node.fields.slug.match(/^\/projects\/.*$/)); //пока не создаем страницы для отдельных проектов
@@ -66,6 +70,7 @@ exports.createPages = ({ actions, graphql }) => {
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions;
+  // fmImagesToRelative(node);
 
   if (node.internal.type === `MarkdownRemark`) {
     const value = createFilePath({ node, getNode });

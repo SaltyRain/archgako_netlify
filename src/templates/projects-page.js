@@ -1,7 +1,8 @@
 import React from "react";
-import PropTypes from "prop-types";
+// import PropTypes from "prop-types";
 import { graphql } from "gatsby";
 import Helmet from "react-helmet";
+import Img from "gatsby-image";
 
 import ProjectTemplate from "./project";
 import Layout from "../components/Layout";
@@ -14,7 +15,7 @@ export const ProjectsPageTemplate = ({
     return (
         <article className="projects">
             <div className="projects__container">
-                <h1 className="projects__title visually-hidden">{title}</h1>
+                <h1 className="projects__title visually-hidden" id="projects">{title}</h1>
                 {
                     projects && projects.map((project, index) => (
                         <ProjectTemplate
@@ -76,26 +77,32 @@ export const ProjectsQuery = graphql `
             }
         }
         }
-    
+
+        ...LayoutFragment
+        
     allMarkdownRemark(filter: {frontmatter: {templateKey: {eq: "project"}}}) {
         edges {
           node {
             frontmatter {
               title
               render {
-                renderImage
+                renderImage 
                 renderAlt
               }
               year
               description
               scheme {
-                schemeImage
+                schemeImage 
                 schemeAlt
               }
+              emplicationHeading
+              emplication {
+              emplicationText
+                }
             }
           }
         }
       }
     }
-
+    
 `
