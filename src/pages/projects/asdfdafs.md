@@ -10,6 +10,9 @@ scheme:
   schemeAlt: asdfadsf
   schemeImage: /img/3.jpg
 emplicationHeading: sdfafs
-emplication: []
+emplication: 
+  - emplicationText: text1
+  - emplicationText: text2
+
 ---
 
