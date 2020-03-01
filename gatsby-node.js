@@ -40,8 +40,15 @@ exports.createPages = ({ actions, graphql }) => {
       } 
       else if (edge.node.frontmatter.templateKey == "news-block") {
         return false;
-      } else {
-        return !Boolean(edge.node.fields.slug.match(/^\/projects\/.*$/)); //пока не создаем страницы для отдельных проектов
+      } 
+      else if (edge.node.frontmatter.templateKey == "service") {
+        return false;
+      } 
+      // else if (edge.node.fields.slug.match(/^\/services\/.*$/)) {
+      //   return false;
+      // }
+      else {
+        return (!Boolean(edge.node.fields.slug.match(/^\/projects\/.*$/))); //пока не создаем страницы для отдельных проектов
       }
     });
 
