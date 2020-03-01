@@ -1,7 +1,7 @@
 ---
 templateKey: service
 title: HoReCa
-price: '4000'
+price: '40000'
 deadline: '1,5-2 месяца'
 row1: Планировочное решение
 row2: Стилевое решение
